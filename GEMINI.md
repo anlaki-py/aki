@@ -38,6 +38,14 @@ The following scripts are available in `package.json`:
   npm run preview
   ```
 
+## Recent Updates
+
+### Favicon and SEO Assets (February 2026)
+- **Asset Migration:** Replaced the default `favicon.svg` with `favicon.jpg` in `public/`.
+- **Metadata Update:** Synchronized `index.html` to reference the new JPEG favicon.
+- **SEO Optimization:** Updated Open Graph (`og:image`) and Twitter Card (`twitter:image`) meta tags to point to `favicon.jpg` to ensure consistent branding across social platforms.
+- **Security Audit:** Performed a codebase scan for secrets and sensitive information; confirmed the repository is safe for public/open-source status on GitHub.
+
 ## Development Conventions
 
 ### Operational Protocol

@@ -1,14 +1,14 @@
 const socialLinks = [
   {
-    name: "gh",
+    name: "gitHub",
     href: "https://github.com/anlaki-py",
   },
   {
-    name: "hf",
+    name: "huggingface",
     href: "https://huggingface.co/anlaki",
   },
   {
-    name: "ig",
+    name: "instagram",
     href: "https://instagram.com/aki.fuun",
   },
 ];
