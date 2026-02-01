@@ -19,7 +19,7 @@ const Projects = () => {
           <a
             key={project.name}
             href={project.href}
-            className="text-sm hover:text-slate-100 hover:translate-x-1 transition-all duration-200 inline-block"
+            className="text-sm underline decoration-slate-700 underline-offset-4 decoration-1 hover:decoration-slate-400 hover:text-slate-100 hover:translate-x-1 transition-all duration-200 inline-block"
           >
             {project.name}
           </a>
