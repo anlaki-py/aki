@@ -7,7 +7,7 @@ const App = () => {
       <div className="max-w-lg w-full p-8 md:p-12 flex-grow flex flex-col justify-center">
         <header className="mb-8">
           <h1 className="text-xl font-bold text-white tracking-tight">aki</h1>
-          <p className="text-sm text-slate-400 mt-1">tech nerd, build things</p>
+          <p className="text-sm text-slate-400 mt-1">tech nerd who build things</p>
         </header>
 
         <Projects />
