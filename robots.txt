@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: http://aki-five.vercel.app/sitemap.xml
+Sitemap: https://anlaki.dev/sitemap.xml
