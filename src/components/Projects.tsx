@@ -7,7 +7,7 @@ const projects: Project[] = [
   },
   {
     name: "mdshare",
-    href: "https://mdshare-aki.vercel.app",
+    href: "https://mdshare.anlaki.dev/",
   },
 ];
 

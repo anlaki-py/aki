@@ -31,6 +31,9 @@ This project is a personal portfolio website for "aki" (anlaki.dev), built with 
 - **Vercel Analytics:** Integrated `@vercel/analytics` for privacy-friendly web insights.
 - **Static Assets:** Moved `robots.txt` and `sitemap.xml` to the `public/` directory to ensure they are correctly served from the site root.
 
+### Project Links (February 2026)
+- **mdshare:** Updated project URL to `https://mdshare.anlaki.dev/` to use a custom subdomain under `anlaki.dev`.
+
 ### Documentation (February 2026)
 - **README:** Created a simple `README.md`
 
