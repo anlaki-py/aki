@@ -1,50 +1,38 @@
 # Aki - Personal Portfolio
 
 ## Project Overview
-This project is a personal portfolio website for "aki", built with a modern React stack. It showcases projects and provides a brief introduction to the developer. The application is designed to be lightweight, fast, and visually clean, utilizing Tailwind CSS for styling.
+This project is a personal portfolio website for "aki" (anlaki.dev), built with a modern React stack. It showcases projects and provides a brief introduction to the developer. The application is designed to be lightweight, fast, and visually clean, utilizing Tailwind CSS for styling.
 
 ## Technology Stack
 - **Framework:** React 19
 - **Build Tool:** Vite 7
 - **Language:** TypeScript 5.9
 - **Styling:** Tailwind CSS 4
+- **Analytics:** Vercel Web Analytics
 - **Linting:** ESLint 9
 
 ## Key Files and Directories
-- **`src/App.tsx`**: The main application component, defining the layout and structure.
+- **`src/App.tsx`**: The main application component, defining the layout, background effects, and entrance animations.
 - **`src/components/`**: Contains reusable UI components like `Projects.tsx` and `Footer.tsx`.
 - **`src/main.tsx`**: The application entry point.
-- **`docs/EXECUTION_PROTOCOL.md`**: Contains strict operational protocols for AI assistance, emphasizing scope isolation and request fidelity.
-- **`vite.config.ts`**: Configuration for the Vite build tool.
-
-## Building and Running
-The following scripts are available in `package.json`:
-
-- **Start Development Server:**
-  ```bash
-  npm run dev
-  ```
-- **Build for Production:**
-  ```bash
-  npm run build
-  ```
-  *Note: This runs `tsc -b` (TypeScript build) before `vite build`.*
-- **Lint Code:**
-  ```bash
-  npm run lint
-  ```
-- **Preview Production Build:**
-  ```bash
-  npm run preview
-  ```
+- **`public/`**: Contains static assets like `favicon.jpg`, `robots.txt`, and `sitemap.xml`.
+- **`docs/EXECUTION_PROTOCOL.md`**: Contains strict operational protocols for AI assistance.
+- **`README.md`**: General project documentation and setup guide.
 
 ## Recent Updates
 
-### Favicon and SEO Assets (February 2026)
-- **Asset Migration:** Replaced the default `favicon.svg` with `favicon.jpg` in `public/`.
-- **Metadata Update:** Synchronized `index.html` to reference the new JPEG favicon.
-- **SEO Optimization:** Updated Open Graph (`og:image`) and Twitter Card (`twitter:image`) meta tags to point to `favicon.jpg` to ensure consistent branding across social platforms.
-- **Security Audit:** Performed a codebase scan for secrets and sensitive information; confirmed the repository is safe for public/open-source status on GitHub.
+### Background & UI Enhancement (February 2026)
+- **Ambient Background:** Implemented a large, static, blurred indigo disk centered in the background to provide a modern "glow" effect on a pure black background.
+- **Entrance Animations:** Added a custom staggered entrance. The header and projects use a "blur-in" reveal, while the footer uses a simple fade-in.
+- **Link Styling:** Enhanced project links with subtle underlines and interactive hover states for better visual affordance.
+- **Viewport Optimization:** Updated the root container to use `min-h-dvh` instead of `min-h-screen`, fixing "phantom" scrollbars caused by mobile browser address bars.
+
+### Analytics and SEO (February 2026)
+- **Vercel Analytics:** Integrated `@vercel/analytics` for privacy-friendly web insights.
+- **Static Assets:** Moved `robots.txt` and `sitemap.xml` to the `public/` directory to ensure they are correctly served from the site root.
+
+### Documentation (February 2026)
+- **README:** Created a simple `README.md`
 
 ## Development Conventions
 
@@ -57,4 +45,4 @@ This project includes a specific **EXECUTION_PROTOCOL** (located in `docs/EXECUT
 ### Code Style
 - **Styling:** Use Tailwind CSS utility classes directly in JSX.
 - **TypeScript:** Ensure type safety. The project uses strict mode (`tsc -b`).
-- **Components:** Functional components with named exports or default exports (as seen in `App.tsx`).
+- **Animations:** Custom animations are defined in `src/index.css` using CSS keyframes and applied via utility classes.

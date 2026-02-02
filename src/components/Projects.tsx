@@ -6,7 +6,7 @@ const projects: Project[] = [
     href: "https://rokaru.vercel.app",
   },
   {
-    name: "MDShare",
+    name: "mdshare",
     href: "https://mdshare-aki.vercel.app",
   },
 ];

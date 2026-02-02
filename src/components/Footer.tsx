@@ -1,6 +1,6 @@
 const socialLinks = [
   {
-    name: "gitHub",
+    name: "github",
     href: "https://github.com/anlaki-py",
   },
   {

@@ -1,5 +1,13 @@
 {
   "name": "aki",
+  "author": "anlaki",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anlaki-py/aki"
+  },
+  "homepage": "https://anlaki.dev",
+  "keywords": ["portfolio", "react", "typescript", "vite", "tailwindcss"],
   "private": true,
   "version": "0.0.0",
   "type": "module",
