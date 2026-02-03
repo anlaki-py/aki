@@ -2,11 +2,11 @@ import type { Project } from "./types";
 
 const projects: Project[] = [
   {
-    name: "rōkaru",
+    name: "rōkaru (prototype)",
     href: "https://rokaru.vercel.app",
   },
   {
-    name: "mdshare",
+    name: "mdshare (prototype)",
     href: "https://mdshare.anlaki.dev/",
   },
 ];
