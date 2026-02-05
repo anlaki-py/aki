@@ -9,7 +9,7 @@ const socialLinks = [
   },
   {
     name: "instagram",
-    href: "https://instagram.com/aki.fuun",
+    href: "https://instagram.com/anlaki.dev",
   },
 ];
 
