@@ -1,7 +1,6 @@
 const projects = [
   { name: "rōkaru", href: "https://rokaru.anlaki.dev" },
   { name: "mdshare", href: "https://mdshare.anlaki.dev/" },
-  { name: "carrd", href: "https://unluky.carrd.co" },
 ];
 
 const Projects = () => {
