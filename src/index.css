@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -60,11 +61,12 @@ h1 {
 .projects {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.5rem;
 }
 
 .project-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   color: #999;
