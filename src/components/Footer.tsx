@@ -2,6 +2,7 @@ const links = [
   { name: "github", href: "https://github.com/anlaki-py" },
   { name: "huggingface", href: "https://huggingface.co/anlaki" },
   { name: "instagram", href: "https://instagram.com/anlaki.dev" },
+  { name: "carrd", href: "https://unluky.carrd.co" },
 ];
 
 const Footer = () => (
