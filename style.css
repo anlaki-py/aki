@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #0a0a0a;
+    color: #888;
+    min-height: 100vh;
+    min-height: 100dvh;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+h1 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.15rem;
+}
+
+.section-title {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: #444;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #999;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.15s;
+}
+
+.project-link:hover {
+    color: #fff;
+}
+
+.project-link::before {
+    content: '→';
+    font-size: 0.75rem;
+    color: #333;
+    transition: color 0.15s;
+}
+
+.project-link:hover::before {
+    color: #555;
+}
+
+footer {
+    flex-shrink: 0;
+    padding-top: 1.5rem;
+}
+
+.footer-divider {
+    height: 1px;
+    background: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-link {
+    font-size: 0.65rem;
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.15s;
+}
+
+.social-link:hover {
+    color: #777;
+}
+
+@media (min-width: 480px) {
+    .container {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 520px;
+        padding: 3rem 2rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .project-link {
+        font-size: 0.9rem;
+    }
+}
