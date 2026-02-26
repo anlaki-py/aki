@@ -1,150 +1,199 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+:root { 
+  --bg: #000000; 
+  --text-muted: #666; 
+  --text-bright: #ffffff; 
 }
 
-html {
-    font-size: 16px;
+* { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+  -webkit-tap-highlight-color: transparent; 
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background: #0a0a0a;
-    color: #888;
-    min-height: 100vh;
-    min-height: 100dvh;
-    line-height: 1.5;
+  background-color: var(--bg); 
+  color: var(--text-muted);
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  padding: 2rem; 
+  position: relative; 
+  overflow-x: hidden;
+}
+
+/* Interactive Ambient Spotlight */
+.spotlight {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; 
+  z-index: 0;
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.05), transparent 40%);
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.spotlight.active {
+  opacity: 1;
 }
 
 .container {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    min-height: 100vh;
-    min-height: 100dvh;
-    display: flex;
-    flex-direction: column;
+  position: relative; 
+  z-index: 1; 
+  max-width: 520px; 
+  width: 100%;
 }
 
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
+/* Intro Animation States */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  filter: blur(8px);
+  transition: all 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
 }
 
 h1 {
-    font-size: 1.25rem;
-    font-weight: 500;
-    color: #fff;
-    letter-spacing: -0.02em;
+  font-size: 2.25rem; 
+  font-weight: 700; 
+  color: var(--text-bright);
+  margin-bottom: 0.75rem; 
+  letter-spacing: -0.05em; 
+  text-transform: lowercase;
+  display: inline-block;
+  min-width: 4ch;
+  cursor: pointer;
+  user-select: none;
+  transition: text-shadow 0.3s ease;
+}
+
+h1:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .subtitle {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 0.15rem;
+  font-size: 0.9rem; 
+  font-weight: 300; 
+  line-height: 1.6; 
+  margin-bottom: 3.5rem; 
+  max-width: 95%;
 }
 
 .section-title {
-    font-size: 0.65rem;
-    font-weight: 500;
-    color: #444;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.75rem;
+  font-size: 0.7rem; 
+  font-weight: 500; 
+  text-transform: uppercase; 
+  letter-spacing: 0.2em;
+  margin-bottom: 1.25rem; 
+  opacity: 0.5;
 }
 
-.projects {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-}
-
+/* Project Links */
 .project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: #999;
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: color 0.15s;
+  display: inline-flex; 
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.25rem; 
+  font-weight: 500; 
+  color: var(--text-bright);
+  text-decoration: none; 
+  margin-bottom: 3.5rem; 
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.project-link:hover {
-    color: #fff;
+.link-text {
+  position: relative; /* Contain the underline just to the text */
 }
 
-.project-link::before {
-    content: '→';
-    font-size: 0.75rem;
-    color: #333;
-    transition: color 0.15s;
+/* The Animated Underline (Now targets only the text span) */
+.link-text::before {
+  content: ''; 
+  position: absolute; 
+  left: 0; 
+  bottom: -4px; 
+  width: 100%; 
+  height: 1px;
+  background: var(--text-bright); 
+  transform: scaleX(0); 
+  transform-origin: right; 
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
 }
 
-.project-link:hover::before {
-    color: #555;
+/* Lucide Icon Styling */
+.project-link svg {
+  width: 0.8em;
+  height: 0.8em;
+  opacity: 0.4;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-footer {
-    flex-shrink: 0;
-    padding-top: 1.5rem;
+.project-link:hover { 
+  transform: translateX(6px); 
 }
 
-.footer-divider {
-    height: 1px;
-    background: #1a1a1a;
-    margin-bottom: 1rem;
+.project-link:hover .link-text::before { 
+  transform: scaleX(1); 
+  transform-origin: left; 
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+.project-link:hover svg {
+  opacity: 1;
+  transform: translate(3px, -3px);
+}
+
+.footer-divider { 
+  display: none; 
+}
+
+.social-links { 
+  display: flex; 
+  gap: 1.5rem; 
+  flex-wrap: wrap; 
 }
 
 .social-link {
-    font-size: 0.65rem;
-    color: #444;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    transition: color 0.15s;
+  text-decoration: none; 
+  color: var(--text-muted); 
+  font-size: 0.8rem; 
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
-.social-link:hover {
-    color: #777;
+.social-link:hover { 
+  color: var(--text-bright); 
+  text-shadow: 0 0 10px rgba(255,255,255,0.4); 
 }
 
-@media (min-width: 480px) {
-    .container {
-        padding: 2rem;
-    }
+/* Mobile scaling and touch overrides */
+@media (max-width: 480px) {
+  body { padding: 1.5rem; }
+  h1 { font-size: 2rem; }
+  .subtitle { font-size: 0.85rem; margin-bottom: 2.5rem; }
+  
+  .project-link { 
+    font-size: 1.15rem; 
+    margin-bottom: 2.5rem; 
+  }
 
-    h1 {
-        font-size: 1.5rem;
-    }
-}
+  .link-text::before {
+    transform: scaleX(1);
+    background: rgba(255, 255, 255, 0.2);
+  }
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 520px;
-        padding: 3rem 2rem;
-    }
+  .project-link:active .link-text::before {
+    background: rgba(255, 255, 255, 1);
+  }
 
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    .subtitle {
-        font-size: 0.9rem;
-    }
-
-    .project-link {
-        font-size: 0.9rem;
-    }
+  .social-links { gap: 1rem; }
 }
