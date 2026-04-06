@@ -15,9 +15,6 @@ const SOCIALS = [
 // --- MAIN LOGIC --- //
 
 document.addEventListener("DOMContentLoaded", () => {
-  const root = document.documentElement;
-  const spotlight = document.querySelector('.spotlight');
-
   // 1. Render Projects
   const projectsContainer = document.getElementById('projects-container');
   if (projectsContainer) {
@@ -42,26 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // 3. Initialize Lucide Icons (Must happen AFTER content injection)
   lucide.createIcons();
   
-  // 4. Spotlight Logic
-  // Initialize spotlight center position for load/mobile
-  let x = window.innerWidth / 2;
-  let y = window.innerHeight / 2;
-  root.style.setProperty('--x', `${x}px`);
-  root.style.setProperty('--y', `${y}px`);
-
-  // Mouse tracking for PC
-  document.addEventListener('mousemove', (e) => {
-    root.style.setProperty('--x', `${e.clientX}px`);
-    root.style.setProperty('--y', `${e.clientY}px`);
-  });
-
-  // Touch tracking for mobile (passive for scroll performance)
-  document.addEventListener('touchmove', (e) => {
-    root.style.setProperty('--x', `${e.touches[0].clientX}px`);
-    root.style.setProperty('--y', `${e.touches[0].clientY}px`);
-  }, { passive: true });
-
-  // 5. Cinematic Decrypt Logic
+  // 4. Cinematic Decrypt Logic
   const title = document.getElementById('title');
   const originalText = "anlaki"; 
   const chars = '<>-_\\[]{}—=+*^?#_01';
@@ -88,16 +66,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // Handle click to re-trigger
   title.addEventListener('click', triggerScramble);
 
-  // 6. Initial Load Sequence
+  // 5. Initial Load Sequence
   const reveals = document.querySelectorAll('.reveal');
 
   setTimeout(() => {
     // Scramble Title
     triggerScramble();
     
-    // Turn on spotlight
-    spotlight.classList.add('active');
-
     // Staggered blur reveal for rest of content
     reveals.forEach((el, i) => {
       setTimeout(() => {
