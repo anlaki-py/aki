@@ -11,17 +11,19 @@
   -webkit-tap-highlight-color: transparent; 
 }
 
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background-color: var(--bg); 
   color: var(--text-muted);
   font-family: 'Space Grotesk', sans-serif;
-  min-height: 100vh; 
   display: flex; 
   align-items: center; 
   justify-content: center;
   padding: 2rem; 
-  position: relative; 
-  overflow-x: hidden;
 }
 
 .container {
