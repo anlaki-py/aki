@@ -1,0 +1,23 @@
+.title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+  display: inline-block;
+  min-width: 4ch;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: var(--text-bright);
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+}

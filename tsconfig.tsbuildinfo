@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/Footer.tsx","./src/components/SocialLinks.tsx","./src/components/Subtitle.tsx","./src/components/Title.tsx","./src/components/index.ts","./src/constants/index.ts","./src/hooks/index.ts","./src/hooks/useReveal.ts","./src/hooks/useScramble.ts"],"version":"6.0.2"}

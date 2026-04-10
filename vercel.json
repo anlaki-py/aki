@@ -1,25 +1,4 @@
 {
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "framework": null,
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/src/index.html"
-    },
-    {
-      "source": "/favicon.svg",
-      "destination": "/public/favicon.svg"
-    },
-    {
-      "source": "/robots.txt",
-      "destination": "/public/robots.txt"
-    },
-    {
-      "source": "/sitemap.xml",
-      "destination": "/public/sitemap.xml"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -61,15 +40,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600"
-        }
-      ]
-    },
-    {
-      "source": "/src/index.html",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
         }
       ]
     }
